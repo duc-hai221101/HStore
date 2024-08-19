@@ -1,0 +1,10 @@
+.select2-selection__choice{
+    background-color: #060606 !important;
+}
+.contact{
+    margin-top: 20px;
+}
+.alert-danger{
+    margin-top: 10px;
+    padding: 3px 10px;
+}

@@ -1,0 +1,8 @@
+.card-header {
+    background-color: aquamarine;
+}
+.checkbox_wrapper, .checkbox_child {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
