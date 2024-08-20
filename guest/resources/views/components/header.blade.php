@@ -99,7 +99,10 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="search_box pull-right">
-                        <input type="text" placeholder="Search"/>
+                        <form action="{{ route('product.search') }}" method="GET">
+                            @csrf
+                            <input type="text" id="search" name="query" placeholder="Tìm kiếm sản phẩm" />
+                        </form>
                     </div>
                 </div>
             </div>

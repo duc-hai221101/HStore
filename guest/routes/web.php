@@ -14,6 +14,9 @@ use App\Http\Controllers\CartController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/home/search', [HomeController::class, 'searchAutocomplete'])->name('products.search');
+Route::get('/search', [HomeController::class, 'search'])->name('product.search');
+Route::get('/products/{id}', [HomeController::class, 'show'])->name('products.show');
 
 Route::get('/category/{slug}/{id}', [CategoryController::class, 'index'])->name('category.product');
 

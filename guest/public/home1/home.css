@@ -552,3 +552,25 @@ ul.sub-menu{
     position: relative;
     height: 400px; /* Đặt chiều cao cố định cho toàn bộ thẻ sản phẩm */
 }
+#search-ajax {
+    position: absolute;
+    z-index: 1000;
+    width: 100%; /* Đặt chiều rộng bằng 100% của phần tử cha */
+    background-color: white;
+    border: 1px solid #ddd;
+    max-height: 200px; /* Giới hạn chiều cao để không bị tràn */
+    overflow-y: auto; /* Thêm scroll nếu kết quả quá nhiều */
+}
+
+#search {
+    width: 100%; /* Đảm bảo chiều rộng của ô tìm kiếm là 100% của cột chứa nó */
+}
+
+#search-ajax li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#search-ajax li:hover {
+    background-color: #f1f1f1;
+}

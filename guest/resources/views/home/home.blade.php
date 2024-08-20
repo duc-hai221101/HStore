@@ -11,6 +11,32 @@
 @endsection
 
 @section('js')
+   <script>
+    $(document).ready(function(){
+    $('#search').on('keyup', function() {
+        var query = $(this).val();
+
+        if(query.length > 2) { // Chỉ tìm kiếm khi nhập trên 2 ký tự
+            $.ajax({
+                url: "{{ route('products.search') }}",
+                type: "GET",
+                data: {'query': query},
+                success: function(data){
+                    $('#search-ajax').fadeIn();
+                    $('#search-ajax').html(data);
+                }
+            });
+        } else {
+            $('#search-ajax').fadeOut();
+        }
+    });
+
+    $(document).on('click', 'li', function(){
+        $('#search').val($(this).text());
+        $('#search-ajax').fadeOut();
+    });
+});
+   </script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
     // Cập nhật số lượng giỏ hàng
